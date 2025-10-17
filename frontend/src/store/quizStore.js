@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import he from 'he';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'https://quizmaster-knxg.onrender.com/api';
 
 const useQuizStore = create((set, get) => ({
   questions: [],
