@@ -147,7 +147,7 @@ const useQuizStore = create((set, get) => ({
     }
   },
 
-  resetQuiz: () => {
+  resetQuiz: async () => {
     set({
       questions: [],
       currentQuestionIndex: 0,
@@ -160,6 +160,7 @@ const useQuizStore = create((set, get) => ({
       timeLeft: 30,
       timerActive: false,
     });
+    await get().fetchQuestions();
   },
 
 
